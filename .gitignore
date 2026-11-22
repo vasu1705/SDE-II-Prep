@@ -17,5 +17,16 @@ node_modules/
 .venv/
 __pycache__/
 
+# Build output & diagnostics from the runnable examples
+target/
+.gradle/
+build/
+*.class
+*.jar
+*.hprof
+*.jfr
+hs_err_pid*.log
+*.iml
+
 # Claude Code local settings
 .claude/settings.local.json

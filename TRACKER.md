@@ -31,13 +31,17 @@ Legend: ✅ note exists and code is verified · 🟡 touched inside another note
 
 ## 3. Spring Boot internals & JPA
 
-| Done | Topic | Status |
-|---|---|---|
-| - [ ] | IoC container, DI styles, bean scopes & lifecycle, auto-configuration | ⏳ |
-| - [ ] | Proxies & AOP: why `@Transactional`/`@Async`/`@Cacheable` fail on self-invocation & private methods | ⏳ |
-| - [ ] | JPA/Hibernate: N+1 (`JOIN FETCH`, `@EntityGraph`), LAZY vs EAGER, transactional rollback rules | ⏳ |
-| - [ ] | `@RestControllerAdvice`, `@Valid`, Spring Security filter chain + JWT | ⏳ |
-| - [ ] | Maven / Gradle packaging & dependency management (*not in this repo yet*) | ⏳ |
+> Spring notes are **lean and not executed** (written from standard Boot 3.x behaviour); run key claims before relying on them.
+
+| Done | Topic | Status | Where |
+|---|---|---|---|
+| - [ ] | IoC container, DI styles, scopes, bean lifecycle, auto-configuration, config | ✅ | [IoC, DI & auto-configuration](02-languages/java/06-spring-boot/01-ioc-di-and-auto-configuration.md) |
+| - [ ] | Proxies & AOP: why `@Transactional`/`@Async`/`@Cacheable` fail on self-invocation & private methods; rollback rules, propagation, isolation | ✅ | [Proxies, transactions & async](02-languages/java/06-spring-boot/02-proxies-transactions-async.md) |
+| - [ ] | JPA/Hibernate: N+1 (`JOIN FETCH`, `@EntityGraph`), LAZY vs EAGER, open-in-view, locking | ✅ | [JPA & Hibernate](02-languages/java/06-spring-boot/03-jpa-hibernate.md) |
+| - [ ] | `@RestControllerAdvice`, `@Valid`, Spring Security filter chain + JWT, test slices, Actuator | ✅ | [REST, errors, security & testing](02-languages/java/06-spring-boot/04-rest-errors-security-testing.md) |
+| - [ ] | Spring Boot interview Q&A (45 + 8 scenarios) | ✅ | [Q&A sheet](02-languages/java/06-spring-boot/05-spring-boot-interview-qa.md) |
+| - [ ] | Runnable, verified Spring example projects | ⏳ | |
+| - [ ] | Maven / Gradle packaging & dependency management (*not in this repo yet*) | ⏳ | |
 
 ## 4. Modern Java (8 → 21)
 
