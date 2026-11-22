@@ -20,13 +20,13 @@ flowchart LR
     subgraph stack["Stack"]
         s1["s1"]
         s2["s2"]
-        s3["s3 = new String(&quot;hi&quot;)"]
+        s3["s3 = new String('hi')"]
     end
     subgraph heap["Heap"]
         subgraph pool["String pool"]
-            P["&quot;hi&quot;"]
+            P["'hi'"]
         end
-        N["String &quot;hi&quot; (separate object)"]
+        N["String 'hi' (separate object)"]
     end
     s1 --> P
     s2 --> P

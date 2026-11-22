@@ -39,8 +39,8 @@ flowchart LR
         T3["[3]"]
         Tdots["..."]
     end
-    T1 --> N1["Node k=&quot;apple&quot;"]
-    T3 --> N2["Node k=&quot;Aa&quot;"] --> N3["Node k=&quot;BB&quot;"] --> N4["Node ..."]
+    T1 --> N1["Node k='apple'"]
+    T3 --> N2["Node k='Aa'"] --> N3["Node k='BB'"] --> N4["Node ..."]
 ```
 
 Three things to remember: the array is **lazily allocated**, its length is **always a power of two**, and `Node.hash` is **cached**.
