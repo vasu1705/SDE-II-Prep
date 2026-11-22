@@ -1,0 +1,21 @@
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors
+.vscode/
+.idea/
+.obsidian/workspace*.json
+
+# Build output (if a docs site is added later)
+site/
+book/
+
+# Local tooling
+node_modules/
+.venv/
+__pycache__/
+
+# Claude Code local settings
+.claude/settings.local.json
