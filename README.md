@@ -20,8 +20,10 @@ Every note is plain Markdown and renders directly on GitHub (use the **☰ outli
 
 ## Progress
 
+Detailed topic-by-topic progress lives in the **[Revision Tracker](TRACKER.md)** (concurrency, JVM, Spring Boot/JPA, modern Java, DSA patterns).
+
 - [ ] System Design
-- [ ] Java
+- [ ] Java — ✅ basics, ✅ collections, ✅ concurrency & async · ⏳ JVM/GC, ⏳ Spring Boot
 - [ ] Python
 - [ ] Node.js
 - [ ] DSA

@@ -14,6 +14,7 @@ Read in order. Every note: analogy → mechanism → runnable code (verified on 
 | 6 | [Generics](06-generics.md) | Erasure, bridge methods, invariance, wildcards & PECS, type tokens |
 | 7 | [Lambdas, streams & Optional](07-lambdas-streams-optional.md) | Lazy pipelines, collectors, parallel pitfalls, `Optional` rules |
 | 8 | [Modern Java 11→21](08-modern-java.md) | Records, sealed types, pattern-matching `switch`, sequenced collections, virtual threads |
+| 9 | [Choosing the right tool](09-choosing-the-right-tool.md) | Records vs classes vs enums vs sealed, streams vs loops, which collection, `Optional` vs exceptions vs a `Result` type, which async tool, what to adopt first |
 
 ## Revision checklist
 

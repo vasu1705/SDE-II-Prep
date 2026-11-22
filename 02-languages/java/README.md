@@ -9,24 +9,21 @@ Each note follows the same shape: *analogy → mechanism → runnable code → p
 
 | # | Section | Status | Highlights |
 |---|---------|--------|------------|
-| 1 | [Java Basics](01-java-basics/README.md) | ✅ 8 notes | memory model, wrappers & `==`, strings, OOP dispatch & init order, exceptions, generics & PECS, streams, records/sealed/pattern matching |
+| 1 | [Java Basics](01-java-basics/README.md) | ✅ 9 notes | memory model, wrappers & `==`, strings, OOP dispatch & init order, exceptions, generics & PECS, streams, records/sealed/pattern matching, **which feature to use when** |
 | 2 | [Collections](02-collections/README.md) | ✅ 6 notes | `equals`/`hashCode`, `HashMap` internals, LRU/`TreeMap`, concurrent collections, 16 practice problems |
-| 3 | Concurrency | ⏳ planned | see checklist below |
+| 3 | [Concurrency & Async](03-concurrency/README.md) | ✅ 5 notes | executors, `CompletableFuture`, **async error handling & HTTP calls**, locks/`volatile`/deadlocks, virtual threads |
 | 4 | JVM internals & performance | ⏳ planned | see checklist below |
 | 5 | Spring Boot | ⏳ planned | see checklist below |
 | 6 | Design patterns & SOLID in Java | ⏳ planned | |
 | 7 | Testing (JUnit 5, Mockito) | ⏳ planned | |
 | 8 | Miscellaneous problems & gotchas | ⏳ planned | puzzlers, "what happens if…" |
 
-## Planned: Concurrency
-- [ ] Java Memory Model, happens-before, `volatile`
-- [ ] `synchronized`, `ReentrantLock`, `ReadWriteLock`, `StampedLock`
-- [ ] Atomics, CAS, `LongAdder`
-- [ ] Executors, thread pools sizing, `ThreadPoolExecutor` internals, rejection policies
-- [ ] `CompletableFuture` composition & error handling
-- [ ] Deadlock / livelock / starvation, detecting with thread dumps
-- [ ] Virtual threads (Loom), structured concurrency
+Progress across all tracks: see the [Revision Tracker](../../TRACKER.md).
+
+## Still to write in Concurrency
+- [ ] `ThreadLocal` in depth, `ReadWriteLock`/`StampedLock` worked examples
 - [ ] Producer–consumer, rate limiter, thread-safe cache — coding problems
+- [ ] Structured concurrency (`StructuredTaskScope`) once it leaves preview
 
 ## Planned: JVM internals & performance
 - [ ] Class loading & class-loader hierarchy
