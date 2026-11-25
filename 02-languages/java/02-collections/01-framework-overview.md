@@ -17,6 +17,43 @@ Java has two hierarchies: **`Collection`** (a bag of single elements — `List`,
 | Always alphabetical | Dictionary | `TreeMap` / `TreeSet` |
 | Most urgent first | ER triage | `PriorityQueue` |
 
+## 0. Why `List<String> names = new ArrayList<>()` — left side vs right side
+
+`List` is an **interface**, not an abstract class. Java puts an abstract helper class (`AbstractList`) between the interface and `ArrayList` to share boilerplate, but you only write the two ends:
+
+```java
+List<String> names = new ArrayList<>();   // LEFT  = contract (what it can do)
+                                          // RIGHT = implementation (how it does it)
+```
+
+This is the rule **"program to an interface, not an implementation."** Three reasons:
+
+1. **Swap in one line.** If you later need `CopyOnWriteArrayList` (thread-safe reads) or `LinkedList`, you change only the right side. The rest of the file still compiles.
+2. **Methods accept more.** `void printNames(List<String> names)` accepts `ArrayList`, `List.of(...)`, `Arrays.asList(...)` and anything else that implements `List`. A parameter typed `ArrayList<String>` rejects them for no reason.
+3. **No lock-in.** Declaring `List` lets you use only `List` methods, so you can't accidentally depend on an `ArrayList`-only method like `trimToSize()`.
+
+> **When is the concrete class on the left?** When you need a method the interface doesn't have. Example: `ArrayDeque` for stack-only operations, or `NavigableMap`/`TreeMap` for `floorKey()` and `ceilingKey()`.
+
+### The same pattern across Java
+
+```text
+Left (contract)                Right (implementation)
+List<T>            =  new ArrayList<>()  /  new LinkedList<>()  /  new CopyOnWriteArrayList<>()
+Set<T>             =  new HashSet<>()    /  new LinkedHashSet<>() /  new TreeSet<>()
+Queue<T> / Deque<T>=  new ArrayDeque<>() /  new PriorityQueue<>()
+Map<K,V>           =  new HashMap<>()    /  new LinkedHashMap<>() /  new TreeMap<>()  /  new ConcurrentHashMap<>()
+Lock               =  new ReentrantLock()
+ExecutorService    =  Executors.newFixedThreadPool(4)   (a factory returns a ThreadPoolExecutor)
+BlockingQueue<T>   =  new LinkedBlockingQueue<>()
+InputStream (abstract class!) = new FileInputStream(...) / new BufferedInputStream(...)
+```
+
+The left side can be an **interface** (`List`, `Lock`) or an **abstract class** (`InputStream`). The rule is the same: **keep the left as general as the code needs, and the right as specific as it must be.**
+
+In Spring the right side is often not a `new` at all: `private final PaymentService payments;` is declared as the interface, and Spring injects the implementation. See the [IoC note](../06-spring-boot/01-ioc-di-and-auto-configuration.md).
+
+---
+
 ## 1. The hierarchy
 
 ```mermaid

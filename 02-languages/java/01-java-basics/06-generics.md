@@ -33,6 +33,53 @@ String s = b.get();                     // no cast needed
 - A bound `T extends A & B` allows multiple interface bounds (class first).
 - **Raw types** (`List` without `<>`) disable checking — only exist for legacy compatibility. Never use them.
 
+## 1.5 The diamond operator `<>`
+
+The diamond tells the compiler: *"infer the type arguments for me."* It saves you from repeating the type on the right side.
+
+```java
+List<String> names = new ArrayList<>();        // Java 7+: String inferred from the LEFT side
+printAll(new ArrayList<>());                    // Java 8+: inferred from the PARAMETER type List<String>
+Comparator<String> c = new Comparator<>() {     // Java 9+: diamond also works with anonymous classes
+    public int compare(String a, String b) { return Integer.compare(a.length(), b.length()); }
+};
+```
+
+Verified on JDK 21 (`printAll` receives an empty list; the comparator returns `1` for `"aa"` vs `"b"`).
+
+| Situation | What the compiler infers | Result |
+|---|---|---|
+| `List<String> x = new ArrayList<>()` | from the declared type | `ArrayList<String>` |
+| `printAll(new ArrayList<>())` | from the method parameter | `ArrayList<String>` |
+| `var x = new ArrayList<>()` | **nothing to infer from** | `ArrayList<Object>` ⚠️ |
+| `var x = new ArrayList<String>()` | explicit | `ArrayList<String>` ✅ |
+
+> [!WARNING]
+> `var` plus a diamond is the trap: `var list = new ArrayList<>(); list.add(42);` compiles and silently makes a list of `Object`. Write the type argument when you use `var` with a constructor.
+
+**Limits to know**
+
+- Diamond only infers; **erasure still happens**. `new ArrayList<>()` at runtime is just an `ArrayList`.
+- You cannot use primitives: `new ArrayList<int>()` is a compile error (use `Integer`).
+- The "type token" trick (`new TypeRef<List<String>>() {}`) needs the type to be *visible in the source*. A diamond can keep it only when the target type supplies it: `TypeRef<Map<String, List<Integer>>> t = new TypeRef<>() {};` works (verified), but `var t = new TypeRef<>() {};` infers `Object` and the runtime type information is lost.
+- Diamond with an anonymous class needs Java 9+.
+
+### Interview Q&A — diamond
+
+<details>
+<summary><b>Q1.</b> What does <code>&lt;&gt;</code> do?</summary>
+
+It asks the compiler to infer the generic type arguments from the context: the declared variable type, the method parameter, or the return type. It doesn't change runtime behaviour.
+</details>
+
+<details>
+<summary><b>Q2.</b> What is <code>var x = new HashMap&lt;&gt;()</code> and why is it a problem?</summary>
+
+With `var` there is no declared type to infer from, so the map becomes `HashMap<Object, Object>`. Put the types in explicitly: `var x = new HashMap<String, Integer>()`.
+</details>
+
+---
+
 ## 2. Type erasure — what the JVM actually sees
 
 ```java
