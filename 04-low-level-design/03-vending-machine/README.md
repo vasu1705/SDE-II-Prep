@@ -28,7 +28,7 @@ stateDiagram-v2
 - State pattern vs a big `switch` — extensibility and testability.
 - **Change-making:** greedy works for standard denominations; fails for odd ones (dynamic programming); what if the machine can't make exact change?
 - Thread-safety if two users touch it (it is physically one user; say so).
-- Links: [State pattern, design patterns section](../../02-languages/java/README.md) (to be written), sealed types for states: [Modern Java](../../02-languages/java/01-java-basics/08-modern-java.md).
+- Links: a [worked reference solution](../../02-languages/java/07-design-patterns-and-lld/03-lld-interview-problems.md#3-vending-machine-state-pattern) already exists (write your own first, then compare); the [State pattern](../../02-languages/java/07-design-patterns-and-lld/02-design-patterns.md); sealed types for states: [Modern Java](../../02-languages/java/01-java-basics/08-modern-java.md).
 
 ## Extension questions
 Card payments, product price changes, inventory reporting, remote monitoring.

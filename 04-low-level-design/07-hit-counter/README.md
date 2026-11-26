@@ -17,7 +17,7 @@
 ## Concurrency design
 - Per-slot atomic counters (`AtomicLongArray`) or `LongAdder` per slot to reduce contention; handle the **stale-slot reset race** (two threads resetting the same slot) with a CAS on the slot's timestamp or a lock striped per slot.
 - Time source: inject `Clock` for tests; beware clock skew.
-- Links: [atomics & `LongAdder`](../../02-languages/java/03-concurrency/04-locks-volatile-deadlock.md#5-atomics-and-cas).
+- Links: [atomics & `LongAdder`](../../02-languages/java/03-concurrency/04-locks-volatile-deadlock.md#5-atomics-and-cas); related reference: the [rate limiter worked solution](../../02-languages/java/07-design-patterns-and-lld/03-lld-interview-problems.md#2-rate-limiter-token-bucket-sliding-window-fixed-window) (sliding window).
 
 ## Scaling follow-up (distributed)
 - Per-node counters + periodic aggregation (approximate, eventually consistent); or a sharded counter service; or Redis (`INCR` on per-second keys with TTL, or sorted-set sliding window).

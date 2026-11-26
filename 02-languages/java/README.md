@@ -12,11 +12,11 @@ Each note follows the same shape: *analogy → mechanism → runnable code → p
 | 1 | [Java Basics](01-java-basics/README.md) | ✅ 9 notes | memory model, wrappers & `==`, strings, OOP dispatch & init order, exceptions, generics & PECS, streams, records/sealed/pattern matching, **which feature to use when** |
 | 2 | [Collections](02-collections/README.md) | ✅ 6 notes | `equals`/`hashCode`, `HashMap` internals, LRU/`TreeMap`, concurrent collections, 16 practice problems |
 | 3 | [Concurrency & Async](03-concurrency/README.md) | ✅ 5 notes | executors, `CompletableFuture`, **async error handling & HTTP calls**, locks/`volatile`/deadlocks, virtual threads |
-| 4 | JVM internals & performance | ⏳ planned (agent drafts exist locally, not yet reviewed/committed) | see checklist below |
+| 4 | [JVM internals & performance](04-jvm-internals/README.md) | ✅ 3 notes (drafted; code run, prose not reviewed line by line) | class loading & JIT, G1/ZGC & real GC logs, production diagnosis playbook |
 | 5 | [Spring Boot](06-spring-boot/README.md) | ✅ 5 notes (lean; **not executed**, see note) | IoC & lifecycle, proxies/`@Transactional`/`@Async` traps, JPA & N+1, REST errors/Security/JWT/testing, 45+8 Q&A |
-| 6 | Design patterns & SOLID in Java | ⏳ planned | |
+| 6 | [Design patterns & SOLID in Java](07-design-patterns-and-lld/README.md) | ✅ 3 notes (drafted; code run, prose not reviewed line by line) | SOLID, 18 patterns, worked LLD problems |
 | 7 | Testing (JUnit 5, Mockito) | ⏳ planned | |
-| 8 | Miscellaneous problems & gotchas | ⏳ planned | puzzlers, "what happens if…" |
+| 8 | [Miscellaneous problems & gotchas](09-java-gotchas/README.md) | 🟡 1 note (drafted); `java.time`/IO/regex and a rapid-fire sheet still to write | puzzlers, "what happens if…" |
 
 Progress across all tracks: see the [Revision Tracker](../../TRACKER.md).
 

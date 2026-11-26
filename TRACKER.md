@@ -25,9 +25,9 @@ Legend: ✅ note exists and code is verified · 🟡 touched inside another note
 |---|---|---|---|
 | - [ ] | Heap layout: Eden/Survivor/Old, Metaspace, TLAB, GC roots, reachability | ✅ | [Memory model](02-languages/java/01-java-basics/01-memory-model.md) |
 | - [ ] | Memory-leak patterns (static maps, unclosed resources, `ThreadLocal`, mutated keys) | ✅ | [Memory model §6](02-languages/java/01-java-basics/01-memory-model.md), [equals & hashCode](02-languages/java/02-collections/02-equals-hashcode.md) |
-| - [ ] | Collectors compared: Serial / Parallel / **G1** / **ZGC** / Shenandoah, pauses, reading GC logs | ⏳ | planned: `04-jvm-internals/` |
-| - [ ] | Class loading, JIT & tiered compilation, escape analysis | ⏳ | |
-| - [ ] | Heap dumps, thread dumps, JFR, diagnosing leaks and high CPU | ⏳ | |
+| - [ ] | Collectors compared: Serial / Parallel / **G1** / **ZGC** / Shenandoah, pauses, reading GC logs | ✅ (draft) | [Garbage collectors](02-languages/java/04-jvm-internals/02-garbage-collectors.md) |
+| - [ ] | Class loading, JIT & tiered compilation, escape analysis | ✅ (draft) | [Class loading & JIT](02-languages/java/04-jvm-internals/01-class-loading-and-jit.md) |
+| - [ ] | Heap dumps, thread dumps, JFR, diagnosing leaks and high CPU | ✅ (draft) | [Diagnosing production issues](02-languages/java/04-jvm-internals/03-diagnosing-production-issues.md) |
 
 ## 3. Spring Boot internals & JPA
 
@@ -83,7 +83,7 @@ Task lists exist for every item; solutions come later, one at a time. Plan: [STU
 | Concurrency/JVM | Thread lifecycle (states) | 🟡 | [primer](02-languages/java/03-concurrency/00-concurrency-from-scratch.md) |
 | Concurrency/JVM | Prevent overselling under concurrent requests | ⏳ | planned Java note |
 | Concurrency/JVM | `CompletableFuture` vs `ExecutorService` | 🟡 covered in two notes; one-page comparison ⏳ | [executors](02-languages/java/03-concurrency/01-executors-thread-pools.md), [CompletableFuture](02-languages/java/03-concurrency/02-completablefuture.md) |
-| Concurrency/JVM | JVM tuning for a checkout service (heap, G1/ZGC, GC logs) | ⏳ | planned |
+| Concurrency/JVM | JVM tuning for a checkout service (heap, G1/ZGC, GC logs) | 🟡 general GC/diagnosis notes exist; a checkout-specific write-up is ⏳ | [GC note](02-languages/java/04-jvm-internals/02-garbage-collectors.md), [diagnosis](02-languages/java/04-jvm-internals/03-diagnosing-production-issues.md) |
 | **Behavioral** | 4 STAR stories | ⏳ templates | [Behavioral](06-behavioral/README.md) |
 
 ## Already finished (from the original list)

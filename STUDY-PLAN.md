@@ -22,7 +22,7 @@ How the six preparation pillars fit together, with links to where each lives in 
    - Thread lifecycle, race conditions, synchronization — [primer](02-languages/java/03-concurrency/00-concurrency-from-scratch.md), [locks note](02-languages/java/03-concurrency/04-locks-volatile-deadlock.md)
    - Preventing overselling under concurrent requests — ⏳ planned note (see [tracker](TRACKER.md))
    - `CompletableFuture` vs `ExecutorService` — [executors](02-languages/java/03-concurrency/01-executors-thread-pools.md), [CompletableFuture](02-languages/java/03-concurrency/02-completablefuture.md) (a one-page comparison is ⏳)
-   - JVM tuning for a high-throughput checkout service — ⏳ (heap sizing, G1 vs ZGC, GC logs)
+   - JVM tuning for a high-throughput checkout service — [GC note](02-languages/java/04-jvm-internals/02-garbage-collectors.md) (heap sizing, G1 vs ZGC, GC logs) and [diagnosis playbook](02-languages/java/04-jvm-internals/03-diagnosing-production-issues.md); a checkout-specific summary is ⏳
    - `happens-before` — [locks note §1](02-languages/java/03-concurrency/04-locks-volatile-deadlock.md#1-the-java-memory-model-in-one-page)
 
 ## If you only have about a week
