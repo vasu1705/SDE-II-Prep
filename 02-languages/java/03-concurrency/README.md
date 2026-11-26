@@ -7,6 +7,7 @@ Read in order. Focus: **which tool to use**, and **how failures propagate** in a
 | # | Note | You will learn |
 |---|------|----------------|
 | 0 | [**Multithreading from scratch (start here)**](00-concurrency-from-scratch.md) | the kitchen analogy; race conditions, locks, `volatile`, pools, futures, deadlock, virtual threads in plain steps |
+| 0b | [**`Runnable`, `Callable`, `Thread` & the task family**](00-runnable-callable-and-threads.md) | what `Runnable` is, runnable classes, `run()` vs `start()`, `Runnable` vs `Callable` vs `Supplier`, `FutureTask`, which overload a lambda picks, **thread states** (with a demo of all six) |
 | 1 | [Executors & thread pools](01-executors-thread-pools.md) | Why not `new Thread`, `ThreadPoolExecutor` decision order, sizing, rejection, **`submit` vs `execute` exception behaviour** |
 | 2 | [`CompletableFuture`](02-completablefuture.md) | `thenApply`/`thenCompose`/`thenCombine`, which thread runs what, **`exceptionally` vs `handle` vs `whenComplete`**, `CompletionException` unwrapping, `allOf`, timeouts |
 | 3 | [Async error handling & external calls](03-async-error-handling-http.md) | **Where each failure lands**, `IOException` vs domain exception, `HttpClient`, retries/backoff/timeouts, `try/catch/finally` ↔ async equivalents |

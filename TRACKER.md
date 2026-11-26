@@ -80,7 +80,7 @@ Task lists exist for every item; solutions come later, one at a time. Plan: [STU
 | **HLD** | E-commerce/fintech, core infra, social/real-time, storage/search, SSH key rotation | ⏳ task READMEs | [System design](01-system-design/README.md) |
 | **SQL** | Order schema, clustered vs non-clustered, inventory consistency, ACID | ⏳ task README (JPA locking/isolation 🟡 in Spring notes) | [Databases](05-databases/README.md) |
 | **Concurrency/JVM** | Race conditions, synchronization, `happens-before` | ✅ | [locks note](02-languages/java/03-concurrency/04-locks-volatile-deadlock.md) |
-| Concurrency/JVM | Thread lifecycle (states) | 🟡 | [primer](02-languages/java/03-concurrency/00-concurrency-from-scratch.md) |
+| Concurrency/JVM | Thread lifecycle (states); `Runnable` vs `Callable` | ✅ | [Runnable, Callable & threads](02-languages/java/03-concurrency/00-runnable-callable-and-threads.md) |
 | Concurrency/JVM | Prevent overselling under concurrent requests | ⏳ | planned Java note |
 | Concurrency/JVM | `CompletableFuture` vs `ExecutorService` | 🟡 covered in two notes; one-page comparison ⏳ | [executors](02-languages/java/03-concurrency/01-executors-thread-pools.md), [CompletableFuture](02-languages/java/03-concurrency/02-completablefuture.md) |
 | Concurrency/JVM | JVM tuning for a checkout service (heap, G1/ZGC, GC logs) | 🟡 general GC/diagnosis notes exist; a checkout-specific write-up is ⏳ | [GC note](02-languages/java/04-jvm-internals/02-garbage-collectors.md), [diagnosis](02-languages/java/04-jvm-internals/03-diagnosing-production-issues.md) |

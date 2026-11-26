@@ -19,7 +19,7 @@ How the six preparation pillars fit together, with links to where each lives in 
 1. **DSA (6 problems):** LRU/LFU, Trapping Rain Water, Kth Largest in a Stream, Word Break, Clone Graph, Median of Two Sorted Arrays (plus the Trie autocomplete if time allows).
 2. **SQL (4 topics):** Order schema, clustered vs non-clustered indexes, inventory consistency, ACID — [Databases](05-databases/README.md).
 3. **Concurrency/JVM (5 topics):**
-   - Thread lifecycle, race conditions, synchronization — [primer](02-languages/java/03-concurrency/00-concurrency-from-scratch.md), [locks note](02-languages/java/03-concurrency/04-locks-volatile-deadlock.md)
+   - Thread lifecycle, race conditions, synchronization — [primer](02-languages/java/03-concurrency/00-concurrency-from-scratch.md), [Runnable, Callable & thread states](02-languages/java/03-concurrency/00-runnable-callable-and-threads.md), [locks note](02-languages/java/03-concurrency/04-locks-volatile-deadlock.md)
    - Preventing overselling under concurrent requests — ⏳ planned note (see [tracker](TRACKER.md))
    - `CompletableFuture` vs `ExecutorService` — [executors](02-languages/java/03-concurrency/01-executors-thread-pools.md), [CompletableFuture](02-languages/java/03-concurrency/02-completablefuture.md) (a one-page comparison is ⏳)
    - JVM tuning for a high-throughput checkout service — [GC note](02-languages/java/04-jvm-internals/02-garbage-collectors.md) (heap sizing, G1 vs ZGC, GC logs) and [diagnosis playbook](02-languages/java/04-jvm-internals/03-diagnosing-production-issues.md); a checkout-specific summary is ⏳

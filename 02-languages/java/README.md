@@ -33,7 +33,7 @@ Progress across all tracks: see the [Revision Tracker](../../TRACKER.md).
 - [ ] JVM flags that matter in containers
 
 ## Interview checklist items still needing a Java note
-- [ ] Thread lifecycle (states and transitions) — extend the [primer](03-concurrency/00-concurrency-from-scratch.md)
+- [x] Thread lifecycle (states and transitions): [Runnable, Callable & threads §8](03-concurrency/00-runnable-callable-and-threads.md#8-thread-lifecycle-the-states)
 - [ ] Preventing overselling under concurrent requests (app lock, Redis Lua/atomic decrement, DB row lock)
 - [ ] `CompletableFuture` vs `ExecutorService` one-page comparison
 - [ ] JVM tuning for a high-throughput checkout service (heap sizing, G1 vs ZGC, pause targets, GC logs)

@@ -46,6 +46,7 @@ t.join();                  // main waits here until t finishes
 
 - `start()` starts a new thread. Calling `run()` directly does **not** start a thread; it just runs the code on the current one. This is a common mistake.
 - The order of the two printed lines is **not guaranteed**. Parallel means you can't predict which line comes first.
+- The `() -> …` you pass to `new Thread(...)` is a **`Runnable`**: a task with no result. For what `Runnable`, `Callable` and the thread states mean, read [Runnable, Callable & threads](00-runnable-callable-and-threads.md) next.
 
 ---
 
