@@ -32,6 +32,12 @@ Progress across all tracks: see the [Revision Tracker](../../TRACKER.md).
 - [ ] Heap/thread dumps, JFR, async-profiler; diagnosing leaks & high CPU
 - [ ] JVM flags that matter in containers
 
+## Interview checklist items still needing a Java note
+- [ ] Thread lifecycle (states and transitions) — extend the [primer](03-concurrency/00-concurrency-from-scratch.md)
+- [ ] Preventing overselling under concurrent requests (app lock, Redis Lua/atomic decrement, DB row lock)
+- [ ] `CompletableFuture` vs `ExecutorService` one-page comparison
+- [ ] JVM tuning for a high-throughput checkout service (heap sizing, G1 vs ZGC, pause targets, GC logs)
+
 ## Spring Boot — what's left
 - [ ] Verified, runnable example projects for the Spring demos (Maven + H2 + MockMvc)
 - [ ] MVC vs WebFlux; Kafka/RabbitMQ with Spring

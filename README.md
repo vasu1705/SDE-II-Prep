@@ -16,7 +16,12 @@ Every note is plain Markdown and renders directly on GitHub (use the **☰ outli
 |---|---------|---------------|
 | 1 | [System Design](01-system-design/README.md) | Fundamentals, building blocks, classic case studies |
 | 2 | [Languages](02-languages/README.md) | [Java](02-languages/java/README.md) (✅ [Basics](02-languages/java/01-java-basics/README.md), ✅ [Collections](02-languages/java/02-collections/README.md)) · [Python](02-languages/python/README.md) · [Node.js](02-languages/node/README.md) |
-| 3 | [DSA](03-dsa/README.md) | Patterns, complexity cheat sheets, problem lists |
+| 3 | [DSA](03-dsa/README.md) | Patterns, ⭐ priority overlaps, problem lists by pattern |
+| 4 | [Low-Level Design](04-low-level-design/README.md) | 8 machine-coding problems (Inventory, Cart, Vending Machine, Hit Counter, …) |
+| 5 | [Databases & SQL](05-databases/README.md) | Order schema, clustered vs non-clustered indexes, inventory consistency, ACID |
+| 6 | [Behavioral](06-behavioral/README.md) | STAR template and story bank |
+
+📅 **[Study plan (6 weeks + "one week left" version)](STUDY-PLAN.md)** · ✅ **[Revision tracker](TRACKER.md)**
 
 ## Progress
 

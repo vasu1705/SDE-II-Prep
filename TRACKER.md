@@ -63,6 +63,29 @@ Legend: ✅ note exists and code is verified · 🟡 touched inside another note
 | - [ ] | Trees & graphs: BFS/DFS, topological sort, Dijkstra | ⏳ | |
 | - [ ] | Binary search on answer, 1D/2D DP | ⏳ | |
 
+## 6. Target interview checklist (from the shared posts)
+
+Task lists exist for every item; solutions come later, one at a time. Plan: [STUDY-PLAN.md](STUDY-PLAN.md).
+
+| Pillar | Item | Status | Where |
+|---|---|---|---|
+| **DSA ⭐** | LRU / LFU | 🟡 LRU reference exists; LFU ⏳ | [data structure design](03-dsa/06-data-structure-design/README.md) |
+| DSA ⭐ | Trapping Rain Water | ⏳ | [arrays & two pointers](03-dsa/01-arrays-sliding-window-two-pointers/README.md) |
+| DSA ⭐ | Kth Largest in a Stream | ⏳ | [heaps & streams](03-dsa/02-heaps-and-streams/README.md) |
+| DSA ⭐ | Word Break (DP + Trie) | ⏳ | [DP & tries](03-dsa/05-dp-and-tries/README.md) |
+| DSA ⭐ | Clone Graph (+ random pointers) | ⏳ | [graphs & trees](03-dsa/04-graphs-and-trees/README.md) |
+| DSA ⭐ | Median of Two Sorted Arrays | ⏳ | [binary search](03-dsa/03-binary-search/README.md) |
+| DSA | Remaining pattern problems (sliding window, heaps, binary search on answer, graphs, LIS, autocomplete) | ⏳ | [DSA index](03-dsa/README.md) |
+| **LLD** | Inventory, Shopping Cart, Vending Machine, Library, Order State Machine, Logging, Hit Counter, Autocomplete | ⏳ task READMEs | [LLD](04-low-level-design/README.md) |
+| **HLD** | E-commerce/fintech, core infra, social/real-time, storage/search, SSH key rotation | ⏳ task READMEs | [System design](01-system-design/README.md) |
+| **SQL** | Order schema, clustered vs non-clustered, inventory consistency, ACID | ⏳ task README (JPA locking/isolation 🟡 in Spring notes) | [Databases](05-databases/README.md) |
+| **Concurrency/JVM** | Race conditions, synchronization, `happens-before` | ✅ | [locks note](02-languages/java/03-concurrency/04-locks-volatile-deadlock.md) |
+| Concurrency/JVM | Thread lifecycle (states) | 🟡 | [primer](02-languages/java/03-concurrency/00-concurrency-from-scratch.md) |
+| Concurrency/JVM | Prevent overselling under concurrent requests | ⏳ | planned Java note |
+| Concurrency/JVM | `CompletableFuture` vs `ExecutorService` | 🟡 covered in two notes; one-page comparison ⏳ | [executors](02-languages/java/03-concurrency/01-executors-thread-pools.md), [CompletableFuture](02-languages/java/03-concurrency/02-completablefuture.md) |
+| Concurrency/JVM | JVM tuning for a checkout service (heap, G1/ZGC, GC logs) | ⏳ | planned |
+| **Behavioral** | 4 STAR stories | ⏳ templates | [Behavioral](06-behavioral/README.md) |
+
 ## Already finished (from the original list)
 
 - ✅ Core essentials — [Java Basics](02-languages/java/01-java-basics/README.md)
