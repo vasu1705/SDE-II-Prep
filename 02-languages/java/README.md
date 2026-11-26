@@ -2,7 +2,7 @@
 
 [← Back to languages](../README.md)
 
-Baseline: **Java 21 (LTS)**. All runnable code in these notes was compiled and run on JDK 21.
+Baseline: **Java 21 (LTS)**. All runnable code in these notes was compiled and run on JDK 21 (what "runnable" means and how to run it: [root README](../../README.md#how-to-run-the-code-samples-runnable-defined); Spring notes are the exception and are unexecuted).
 Each note follows the same shape: *analogy → mechanism → runnable code → pitfalls → interview Q&A → predict-the-output*.
 
 ## Sections

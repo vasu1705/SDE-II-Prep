@@ -33,6 +33,20 @@ Detailed topic-by-topic progress lives in the **[Revision Tracker](TRACKER.md)**
 - [ ] Node.js
 - [ ] DSA
 
+## How to run the code samples ("runnable" defined)
+
+A Java code block is **runnable** when its **first line** is `// Run: ClassName.java`. It is then a complete, single-file program: one public class `ClassName` with a `main` method and no third-party libraries. To run it:
+
+1. Copy the block into a file named `ClassName.java`.
+2. Run `java ClassName.java` (needs **JDK 21**; Java 11+ can launch a single source file directly, no `javac` step).
+3. Some blocks need JVM flags, shown as `// Run: ClassName.java  (needs: java --some-flag ClassName.java)`; use those flags.
+
+Other points:
+- Blocks **without** the `// Run:` marker are **illustrations** (fragments, config, or multi-file code such as the Spring samples). They are not meant to be run as-is.
+- The output printed under a runnable block was captured from a real run on JDK 21. Results that depend on timing or threads (race-condition counters, speed comparisons) differ from run to run; the note says when.
+- **Not executed:** the [Spring Boot notes](02-languages/java/06-spring-boot/README.md) and some short snippets in the concurrency primer are marked as unexecuted.
+- To run every runnable block in a note at once, use [`tools/run-java-blocks.py`](tools/run-java-blocks.py). It reports only failures, and a couple of blocks fail on purpose (an `OutOfMemoryError` demo and a `System.exit` demo).
+
 ## Conventions
 
 - Folders and files are numbered (`01-`, `02-`) so they sort in study order.
